@@ -4,251 +4,712 @@
     <title>Home</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.22.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script type="module" src="script.js"></script>
   </head>
   <body class="bg-stone-50">
-    <main class="min-h-full flex flex-col justify-center items-center bg-stone-50 text-stone-900">
-    <header class="bg-red-500 flex justify-cente">
-    <div class="logo">
-        <img src="./img/logo.png" alt="Lotengo">
-    </div>
-    <div>Cartones por habilitar: 1223</div>
-    <div>icono info</div>
-    <div>icono logout</div>
-</header>
-<nav class="text-xs">
-  <ul class="steps">
-    <li class="step step-primary">
-      Ingreso de Facturas
-    </li>
-    <li class="step">
-      Habilitacion de Cartones
-    </li>
-    <li class="step">
-      Finalizado
-    </li>
-  </ul>
-</nav>
-<main>
-    <form>
-        <fieldset class="bg-yellow-500 flex flex-col items-center px-6 py-3" id="pasoUno">
-            <h1 class="text-2xl font-bold uppercase">Ingreso de facturas</h1>
-            <div>
-                <div>
-                    <div class="flex flex-col gap-1 ">
-                        <label class="text-sm font-bold " for="nit">NIT</label>
-                        <input type="number" class="border border-stone-400 px-3 py-1.5 rounded-lg" id="nit" placeholder="Ingrese el NIT">
+    <div
+      class="
+        min-h-full
+        flex flex-col
+        justify-center
+        items-center
+        bg-stone-50
+        text-stone-900
+      "
+    >
+      <header class="w-full py-4 flex justify-end items-center container">
+        <div class="logo">
+          <img src="./img/logo.png" alt="Lo tengo" />
+        </div>
+        <div class="ml-4 text-sm">Cartones por habilitar: 1223</div>
+        <div class="flex items-center gap-2 ml-8">
+          <button class="w-8 h-8 text-3xl">
+            <span
+              class="iconify"
+              data-icon="ph:info"
+              data-inline="false"
+            ></span>
+          </button>
+          <button class="w-8 h-8 text-3xl">
+            <span
+              class="iconify"
+              data-icon="ph:sign-out"
+              data-inline="false"
+            ></span>
+          </button>
+        </div>
+      </header>
+      <nav class="text-sm">
+        <ul class="flex gap-12">
+          <li
+            class="
+              relative
+              z-10
+              bg-blue-500
+              border border-transparent
+              text-stone-50 text-center
+              px-4
+              py-2
+              rounded-full
+              after:content-['']
+              after:absolute
+              after:top-4
+              after:-right-16
+              after:w-16
+              after:h-0.5
+              after:bg-blue-500
+              after:z-0
+            "
+          >
+            Ingreso de Facturas
+          </li>
+          <li
+            class="
+              relative
+              z-20
+              bg-stone-50
+              border border-blue-500
+              text-stone-500 text-center
+              px-4
+              py-2
+              rounded-full
+              after:content-['']
+              after:absolute
+              after:top-4
+              after:-right-16
+              after:w-16
+              after:h-0.5
+              after:bg-blue-500
+              after:z-0
+              hover:bg-blue-500 hover:text-stone-50 hover:border-transparent
+              transition
+              ease-in
+              duration-150
+            "
+          >
+            Habilitacion de Cartones
+          </li>
+          <li
+            class="
+              relative
+              z-30
+              bg-stone-50
+              border border-blue-500
+              text-stone-500 text-center
+              px-4
+              py-2
+              rounded-full
+              hover:bg-blue-500 hover:text-stone-50 hover:border-transparent
+              transition
+              ease-in
+              duration-150
+            "
+          >
+            Finalizado
+          </li>
+        </ul>
+      </nav>
+      <main class="mt-8">
+        <form>
+          <!-- <fieldset class="flex flex-col items-center px-6 py-3" id="pasoUno">
+            <div class="flex flex-col gap-12">
+              <div
+                class="grid grid-cols-2 grid-rows-1 divide-x divide-stone-400"
+              >
+                <div class="pr-4">
+                  <h2 class="text-center text-base font-bold uppercase">
+                    Ingreso de facturas
+                  </h2>
+                  <div class="h-full mt-4">
+                    <div class="flex flex-col gap-1 justify-start">
+                      <div
+                        class="
+                          grid
+                          grid-cols-[1fr_auto]
+                          justify-center
+                          items-end
+                        "
+                      >
+                        <div class="flex flex-col gap-1">
+                          <label
+                            class="text-sm font-medium uppercase"
+                            for="nit"
+                          >
+                            NIT
+                          </label>
+                          <div class="grid grid-cols-[1fr_auto] gap-4">
+                            <input
+                              type="number"
+                              class="
+                                w-full
+                                bg-stone-300
+                                text-stone-900
+                                px-3
+                                py-2
+                                rounded
+                                outline-none
+                              "
+                              id="nit"
+                              placeholder="Ingrese el NIT"
+                            />
+                            <button
+                              type="button"
+                              class="
+                                bg-blue-500
+                                text-stone-50 text-sm
+                                px-4
+                                py-2
+                                rounded-md
+                              "
+                            >
+                              Comprobar
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <p class="text-sm text-red-500">
+                          ¡No se obtuvieron datos!.
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                        <label for="nombre">NOMBRE O RAZÓN SOCIAL</label>
-                        <input type="text" id="nombre" placeholder="Ingrese el nombre o razón social">
-                        <small>¡Revise que todas las facturas tengan el mismo nombre!.</small>
+                    <div class="flex flex-col gap-1 justify-start">
+                      <div class="flex flex-col gap-1">
+                        <label
+                          class="text-sm font-medium uppercase"
+                          for="nombre"
+                          >Nombre o razón social</label
+                        >
+                        <input
+                          type="text"
+                          class="
+                            bg-stone-300
+                            text-stone-900
+                            px-3
+                            py-2
+                            rounded
+                            outline-none
+                          "
+                          id="nombre"
+                          placeholder="Ingrese el nombre o razón social"
+                        />
+                      </div>
+                      <div>
+                        <p class="text-sm text-red-500">
+                          ¡Revise que todas las facturas tengan el mismo
+                          nombre!.
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                        <input type="date" id="fechaNacimiento">
-                        <label for="fechaNacimiento">Fecha de Naciemiento</label>
+                    <div class="flex flex-col gap-1 mt-2 mb-6">
+                      <label
+                        class="text-sm font-medium uppercase"
+                        for="fechaNacimiento"
+                        >Fecha de Naciemiento</label
+                      >
+                      <input
+                        type="date"
+                        class="
+                          bg-stone-300
+                          text-stone-900
+                          px-3
+                          py-2
+                          rounded
+                          outline-none
+                        "
+                        id="fechaNacimiento"
+                      />
                     </div>
                     <hr />
-                    <div>
-                        <div>
-                            <div>
-                                <label for="comercio">Nombre del comercio</label>
-                                <input type="text" id="comercio" list="comercios">
-                                <datalist id="comercios">
-                                    <option value="ACAI BAR SUPER FOOD">
-                                    <option value="ADIDAS">
-                                    <option value="ALDO">
-                                    <option value="ALVINIES">
-                                    <option value="AS DE COPAS">
-                                    <option value="BABY CORP">
-                                    <option value="BLACK LLAMA">
-                                    <option value="BRASARGENT">
-                                    <option value="BUBBLE GUMMERS">
-                                    <option value="BURGER KING">
-                                    <option value="CANDY CORP/RAINBOW">
-                                    <option value="CANELITA CHEESECAKE FACTORY">
-                                    <option value="CATERPILLAR">
-                                    <option value="CLAUDIA KAREN">
-                                    <option value="COLLOKY">
-                                    <option value="CORTEFIEL">
-                                    <option value="COSMET">
-                                    <option value="CROCS">
-                                    <option value="DAYLIGHT DONUTS BO">
-                                    <option value="DEQUINCE">
-                                    <option value="DIESEL">
-                                    <option value="DONATELLA">
-                                    <option value="DOUMO">
-                                    <option value="EL DEBER">
-                                    <option value="F45 ZONA NORTE">
-                                    <option value="FAIR PLAY">
-                                    <option value="FARMACIA CHAVEZ">
-                                    <option value="FEMENINA">
-                                    <option value="FILI STEIK">
-                                    <option value="FIRST">
-                                    <option value="FLAVOR BURST">
-                                    <option value="FLORERÍA RIVERA">
-                                    <option value="FUNDASMANIA">
-                                    <option value="GREENWASH 360">
-                                    <option value="H2O">
-                                    <option value="HAUSCENTER">
-                                    <option value="HERING">
-                                    <option value="LA IBERICA/HERSHEY">
-                                    <option value="HIJOS DE RAMON">
-                                    <option value="HIPERMAXI">
-                                    <option value="HOT BURGER">
-                                    <option value="IMPULSE">
-                                    <option value="INES ESPAÑA">
-                                    <option value="ISLA VIVA">
-                                    <option value="JOYERÍA CARRASCO">
-                                    <option value="JOYERIA PARIS">
-                                    <option value="JOYERIA RICHARDIN">
-                                    <option value="JOYERÍA TAURO">
-                                    <option value="KATANA">
-                                    <option value="KAWKA">
-                                    <option value="KOVI">
-                                    <option value="LA BARRA">
-                                    <option value="LA BARRICA ALLTRADE">
-                                    <option value="LA CALESITA">
-                                    <option value="LA CASA DEL CAMBA">
-                                    <option value="LA DOCE">
-                                    <option value="LA GANGA">
-                                    <option value="LA PARISIENNE KETOCHICS">
-                                    <option value="LA PAVLOVA">
-                                    <option value="LACOSTE">
-                                    <option value="LADY POSH">
-                                    <option value="LOLA Y LOKA">
-                                    <option value="LOMOS GRILL">
-                                    <option value="MADERA">
-                                    <option value="MANJAR DE ORO">
-                                    <option value="MARCAS LIDER LUPO">
-                                    <option value="MAYBELLINE">
-                                    <option value="MESTIZO">
-                                    <option value="MINISO">
-                                    <option value="MITSUBA">
-                                    <option value="MED">
-                                    <option value="MONALISA BIER HAUS">
-                                    <option value="MONSTER WINGS">
-                                    <option value="MULTICINE">
-                                    <option value="NUTREXPLOSION">
-                                    <option value="OPTICA PRECISION">
-                                    <option value="OSH KOSH">
-                                    <option value="PACHA WOODS">
-                                    <option value="PANINO">
-                                    <option value="PEDRO DEL HIERRO">
-                                    <option value="POKE POKE">
-                                    <option value="POLLOS CHUY">
-                                    <option value="POLO RALPH LAUREN">
-                                    <option value="POUNDERS">
-                                    <option value="PREMIER FITNESS CLUB">
-                                    <option value="PRUNE">
-                                    <option value="PSYCHO BUNNY">
-                                    <option value="PUERTO MILANESA">
-                                    <option value="PUKET">
-                                    <option value="PUMA">
-                                    <option value="PURIFICACION GARCIA">
-                                    <option value="REVLON">
-                                    <option value="ROCK AND BOWL">
-                                    <option value="ROKYS">
-                                    <option value="ROSEN">
-                                    <option value="SAMSUNG">
-                                    <option value="SAYUBU">
-                                    <option value="SBARRO">
-                                    <option value="SBC">
-                                    <option value="SCARPE">
-                                    <option value="SPRINGFIELD">
-                                    <option value="STARBUCKS">
-                                    <option value="SUBWAY">
-                                    <option value="TANG">
-                                    <option value="TEXTILON">
-                                    <option value="TOTTO">
-                                    <option value="TOUS">
-                                    <option value="TROPICAL TOURS">
-                                    <option value="UNDER ARMOUR">
-                                    <option value="VACA FRIA">
-                                    <option value="VACA FRIA GOURMET">
-                                    <option value="WOMEN´SECRET">
-                                    <option value="YUTH KIDS">
-                                    <option value="BOBA">
-                                    <option value="NUTRIGO">
-                                </datalist>
-                            </div>
-                            <div>
-                                <label for="monto">MONTO DE LA FACTURA</label>
-                                <input type="number" id="monto">
-                                <button id="agregarFactura">Agregar</button>
-                            </div>
+                    <div
+                      class="
+                        mt-6
+                        grid grid-cols-1
+                        lg:grid-cols-[1fr_auto]
+                        gap-6
+                      "
+                    >
+                      <div>
+                        <div class="flex flex-col gap-1">
+                          <label
+                            class="text-sm font-medium uppercase"
+                            for="comercio"
+                            >Nombre del comercio</label
+                          >
+                          <input
+                            type="text"
+                            class="
+                              bg-stone-300
+                              text-stone-900
+                              px-3
+                              py-2
+                              rounded
+                              outline-none
+                            "
+                            id="comercio"
+                            list="comercios"
+                          />
+                          <datalist id="comercios">
+                            <option value="ACAI BAR SUPER FOOD"></option>
+                            <option value="ADIDAS"></option>
+                            <option value="ALDO"></option>
+                            <option value="ALVINIES"></option>
+                            <option value="AS DE COPAS"></option>
+                            <option value="BABY CORP"></option>
+                            <option value="BLACK LLAMA"></option>
+                            <option value="BRASARGENT"></option>
+                            <option value="BUBBLE GUMMERS"></option>
+                            <option value="BURGER KING"></option>
+                            <option value="CANDY CORP/RAINBOW"></option>
+                            <option
+                              value="CANELITA CHEESECAKE FACTORY"
+                            ></option>
+                            <option value="CATERPILLAR"></option>
+                            <option value="CLAUDIA KAREN"></option>
+                            <option value="COLLOKY"></option>
+                            <option value="CORTEFIEL"></option>
+                            <option value="COSMET"></option>
+                            <option value="CROCS"></option>
+                            <option value="DAYLIGHT DONUTS BO"></option>
+                            <option value="DEQUINCE"></option>
+                            <option value="DIESEL"></option>
+                            <option value="DONATELLA"></option>
+                            <option value="DOUMO"></option>
+                            <option value="EL DEBER"></option>
+                            <option value="F45 ZONA NORTE"></option>
+                            <option value="FAIR PLAY"></option>
+                            <option value="FARMACIA CHAVEZ"></option>
+                            <option value="FEMENINA"></option>
+                            <option value="FILI STEIK"></option>
+                            <option value="FIRST"></option>
+                            <option value="FLAVOR BURST"></option>
+                            <option value="FLORERÍA RIVERA"></option>
+                            <option value="FUNDASMANIA"></option>
+                            <option value="GREENWASH 360"></option>
+                            <option value="H2O"></option>
+                            <option value="HAUSCENTER"></option>
+                            <option value="HERING"></option>
+                            <option value="LA IBERICA/HERSHEY"></option>
+                            <option value="HIJOS DE RAMON"></option>
+                            <option value="HIPERMAXI"></option>
+                            <option value="HOT BURGER"></option>
+                            <option value="IMPULSE"></option>
+                            <option value="INES ESPAÑA"></option>
+                            <option value="ISLA VIVA"></option>
+                            <option value="JOYERÍA CARRASCO"></option>
+                            <option value="JOYERIA PARIS"></option>
+                            <option value="JOYERIA RICHARDIN"></option>
+                            <option value="JOYERÍA TAURO"></option>
+                            <option value="KATANA"></option>
+                            <option value="KAWKA"></option>
+                            <option value="KOVI"></option>
+                            <option value="LA BARRA"></option>
+                            <option value="LA BARRICA ALLTRADE"></option>
+                            <option value="LA CALESITA"></option>
+                            <option value="LA CASA DEL CAMBA"></option>
+                            <option value="LA DOCE"></option>
+                            <option value="LA GANGA"></option>
+                            <option value="LA PARISIENNE KETOCHICS"></option>
+                            <option value="LA PAVLOVA"></option>
+                            <option value="LACOSTE"></option>
+                            <option value="LADY POSH"></option>
+                            <option value="LOLA Y LOKA"></option>
+                            <option value="LOMOS GRILL"></option>
+                            <option value="MADERA"></option>
+                            <option value="MANJAR DE ORO"></option>
+                            <option value="MARCAS LIDER LUPO"></option>
+                            <option value="MAYBELLINE"></option>
+                            <option value="MESTIZO"></option>
+                            <option value="MINISO"></option>
+                            <option value="MITSUBA"></option>
+                            <option value="MED"></option>
+                            <option value="MONALISA BIER HAUS"></option>
+                            <option value="MONSTER WINGS"></option>
+                            <option value="MULTICINE"></option>
+                            <option value="NUTREXPLOSION"></option>
+                            <option value="OPTICA PRECISION"></option>
+                            <option value="OSH KOSH"></option>
+                            <option value="PACHA WOODS"></option>
+                            <option value="PANINO"></option>
+                            <option value="PEDRO DEL HIERRO"></option>
+                            <option value="POKE POKE"></option>
+                            <option value="POLLOS CHUY"></option>
+                            <option value="POLO RALPH LAUREN"></option>
+                            <option value="POUNDERS"></option>
+                            <option value="PREMIER FITNESS CLUB"></option>
+                            <option value="PRUNE"></option>
+                            <option value="PSYCHO BUNNY"></option>
+                            <option value="PUERTO MILANESA"></option>
+                            <option value="PUKET"></option>
+                            <option value="PUMA"></option>
+                            <option value="PURIFICACION GARCIA"></option>
+                            <option value="REVLON"></option>
+                            <option value="ROCK AND BOWL"></option>
+                            <option value="ROKYS"></option>
+                            <option value="ROSEN"></option>
+                            <option value="SAMSUNG"></option>
+                            <option value="SAYUBU"></option>
+                            <option value="SBARRO"></option>
+                            <option value="SBC"></option>
+                            <option value="SCARPE"></option>
+                            <option value="SPRINGFIELD"></option>
+                            <option value="STARBUCKS"></option>
+                            <option value="SUBWAY"></option>
+                            <option value="TANG"></option>
+                            <option value="TEXTILON"></option>
+                            <option value="TOTTO"></option>
+                            <option value="TOUS"></option>
+                            <option value="TROPICAL TOURS"></option>
+                            <option value="UNDER ARMOUR"></option>
+                            <option value="VACA FRIA"></option>
+                            <option value="VACA FRIA GOURMET"></option>
+                            <option value="WOMEN´SECRET"></option>
+                            <option value="YUTH KIDS"></option>
+                            <option value="BOBA"></option>
+                            <option value="NUTRIGO"></option>
+                          </datalist>
                         </div>
-                        <div>
-                            <div>
-                                <h1>Acumulado:</h1>
-                                <p>Bs.-123</p>
-                            </div>
-                            <hr />
-                            <div>
-                                <h1>Cartones</h1>
-                                <p>4</p>
-                            </div>
+                        <div class="flex flex-col gap-1 mt-2">
+                          <label
+                            class="text-sm font-medium uppercase"
+                            for="monto"
+                            >MONTO DE LA FACTURA</label
+                          >
+                          <div class="flex flex-wrap lg:flex-nowrap gap-4">
+                            <input
+                              type="number"
+                              class="
+                                w-full
+                                lg:w-auto
+                                bg-stone-300
+                                text-stone-900
+                                px-3
+                                py-2
+                                rounded
+                                outline-none
+                              "
+                              id="monto"
+                            />
+                            <button
+                              id="agregarFactura"
+                              type="button"
+                              class="
+                                w-full
+                                lg:w-auto
+                                bg-blue-500
+                                text-stone-50 text-sm
+                                px-4
+                                py-2
+                                rounded-md
+                              "
+                            >
+                              Agregar
+                            </button>
+                          </div>
                         </div>
+                      </div>
+                      <div
+                        class="bg-stone-300 text-stone-900 px-4 py-2 rounded-md"
+                      >
+                        <div class="mb-2">
+                          <h3 class="uppercase text-sm font-medium">
+                            Acumulado:
+                          </h3>
+                          <p class="text-2xl">Bs.-123</p>
+                        </div>
+                        <hr />
+                        <div class="mt-2">
+                          <h3 class="uppercase text-sm font-medium">
+                            Cartones:
+                          </h3>
+                          <p class="text-2xl text-center font-medium">4</p>
+                        </div>
+                      </div>
                     </div>
-                    <div id="alertCalculoDeCartones">
-                        <p>FALTAN BS.- 342 PARA 5 CARTONES</p>
+                    <div
+                      id="alertCalculoDeCartones"
+                      class="
+                        bg-blue-500
+                        text-stone-50 text-xs
+                        px-3
+                        py-2
+                        font-medium
+                        mt-4
+                      "
+                    >
+                      <p>FALTAN BS.- 342 PARA 5 CARTONES</p>
                     </div>
+                  </div>
                 </div>
-                <div>
-                    <legend>Facturas acumuladas</legend>
-                    <div id="displayFacturasAcumuladas">
-                        <div>Las Brisas Bs.-200</div>
-                        <div id="edit">Icono editar</div>
-                        <div id="delete">Icono eliminar</div>
+                <div class="pl-4">
+                  <h2 class="text-center text-base font-bold uppercase">
+                    Facturas acumuladas
+                  </h2>
+                  <div id="displayFacturasAcumuladas" class="bg-stone-300 mt-4">
+                    <div class="overflow-x-auto relative">
+                      <table class="w-full text-sm text-left text-gray-500">
+                        <tbody>
+                          <tr class="bg-stone-200 border-b">
+                            <th
+                              scope="row"
+                              class="
+                                py-1
+                                px-6
+                                font-medium
+                                text-gray-900
+                                uppercase
+                                whitespace-nowrap
+                              "
+                            >
+                              Las Brisas Bs.-200
+                            </th>
+                            <td
+                              class="
+                                py-1
+                                px-6
+                                flex
+                                justify-end
+                                items-center
+                                gap-2
+                              "
+                            >
+                              <button
+                                type="button"
+                                class="
+                                  text-lg text-black
+                                  hover:text-blue-600
+                                  transition
+                                  ease-in
+                                  duration-150
+                                "
+                              >
+                                <span
+                                  class="iconify"
+                                  data-icon="ph:pencil"
+                                  data-inline="false"
+                                ></span>
+                              </button>
+                              <button
+                                type="button"
+                                class="
+                                  text-lg text-black
+                                  hover:text-red-600
+                                  transition
+                                  ease-in
+                                  duration-150
+                                "
+                              >
+                                <span
+                                  class="iconify"
+                                  data-icon="ph:trash"
+                                  data-inline="false"
+                                ></span>
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
+                  </div>
                 </div>
-                <div>
-                    <button>Siguiente</button>
-                </div>
-        </fieldset>
-        <fieldset id="pasoDos">
-            <legend>HABILITACIÓN DE CORTONES</legend>
-            <div>
-                <div>
-                    <div>
-                        <h3>Cartones</h3>
-                        <div id="cartonesFaltantes">3</div>
-                    </div>
-                    <div>
-                        <label for="serieCarton">Número de serie</label>
-                        <input type="text" id="serieCarton">
-                        <button id="habilitarSerie">Habilitar</button>
-                    </div>
-                </div>
-                <hr />
-                <div>
-                    <h2>Cartones habilitados</h2>
-                    <div id="mostrarCartonesHabilitaos">
-                        <div>Cartón Nº00001</div>
-                    </div>
-                </div>
+              </div>
+              <div class="flex justify-center">
+                <a
+                  href="#pasoDos"
+                  class="bg-green-500 px-4 py-2 uppercase rounded-md text-sm"
+                >
+                  Siguiente
+                </a>
+              </div>
             </div>
-            <div>
-                <div>
-                    <button>Anterior</button>
+          </fieldset> -->
+          <!-- <fieldset id="pasoDos" class="flex flex-col items-center px-6 py-3">
+            <div class="flex flex-col gap-12">
+              <div class="flex flex-col divide-y divide-stone-700">
+                <div class="flex flex-col gap-2 pb-4">
+                  <h2 class="text-center text-base font-bold uppercase">
+                    Habilitación de cartones
+                  </h2>
+                  <div class="grid grid-cols-[auto_1fr] gap-2">
+                    <div
+                      class="
+                        bg-stone-300
+                        text-stone-900
+                        flex flex-col
+                        justify-center
+                        items-center
+                        gap-2
+                        px-4
+                        py-2
+                        rounded-md
+                      "
+                    >
+                      <h3 class="uppercase text-sm font-medium">Cartones</h3>
+                      <p class="text-5xl" id="cartonesFaltantes">3</p>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <label
+                        class="text-sm font-medium uppercase"
+                        for="serieCarton"
+                        >Número de serie:</label
+                      >
+                      <div class="flex flex-col gap-2">
+                        <input
+                          type="text"
+                          class="
+                            bg-stone-300
+                            text-stone-900
+                            px-3
+                            py-2
+                            rounded
+                            outline-none
+                          "
+                          id="serieCarton"
+                        />
+                        <button
+                          id="habilitarSerie"
+                          type="button"
+                          class="
+                            bg-blue-500
+                            text-stone-50 text-sm
+                            h-full
+                            px-4
+                            py-2
+                            rounded-md
+                          "
+                        >
+                          Habilitar
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="bg-green-500 px-6 py-3">
+                      <p>EL CARTÓN Nº 00002, REGISTRADO EXITOSAMENTE</p>
+                    </div>
+                    <div class="bg-red-500 text-stone-50 px-6 py-3">
+                      <p>
+                        EL CARTÓN Nº 00002, {ESTÁ REGISTRADO A OTRO USUARIO}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                    <button>Siguiente</button>
+                <div class="pt-4">
+                  <div>
+                    <h2 class="text-center text-base font-bold uppercase">
+                      Cartones habilitados
+                    </h2>
+                    <div
+                      id="mostrarCartonesHabilitaos"
+                      class="h-64 min-h-full bg-stone-300"
+                    >
+                      <div class="overflow-x-auto relative">
+                        <table
+                          class="
+                            w-full
+                            min-h-full
+                            text-sm text-left text-gray-500
+                          "
+                        >
+                          <tbody>
+                            <tr class="bg-stone-200 border-b">
+                              <th
+                                scope="row"
+                                class="
+                                  py-1
+                                  px-6
+                                  font-medium
+                                  text-gray-900
+                                  uppercase
+                                  whitespace-nowrap
+                                "
+                              >
+                                Cartón Nº00001
+                              </th>
+                              <td
+                                class="
+                                  py-1
+                                  px-6
+                                  flex
+                                  justify-end
+                                  items-center
+                                  gap-2
+                                "
+                              >
+                                <button
+                                  type="button"
+                                  class="
+                                    text-lg text-black
+                                    hover:text-red-600
+                                    transition
+                                    ease-in
+                                    duration-150
+                                  "
+                                >
+                                  <span
+                                    class="iconify"
+                                    data-icon="ph:trash"
+                                    data-inline="false"
+                                  ></span>
+                                </button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="flex justify-center gap-8">
+                <a
+                  href="#pasoUno"
+                  class="bg-green-500 px-4 py-2 uppercase rounded-md text-sm"
+                >
+                  Anterior
+                </a>
+                <a
+                  href="#pasoDos"
+                  class="bg-green-500 px-4 py-2 uppercase rounded-md text-sm"
+                >
+                  Siguiente
+                </a>
+              </div>
             </div>
-        </fieldset>
-        <fieldset id="pasoTres">
-            <div id="mensajeFinal">El cliente JUAN LOPEZ registró correctamente 4 cartones para el primer sorteo en
-                fecha 15/09/2022</div>
-            <button>Nuevo Registro</button>
-        </fieldset>
-      </form>
-    </main>
+          </fieldset> -->
+          <fieldset id="pasoTres">
+            <div class="flex flex-col gap-12 justify-center items-center">
+              <div id="mensajeFinal" class="max-w-md text-center">
+                <p>
+                  El cliente JUAN LOPEZ registró correctamente 4 cartones para
+                  el primer sorteo en fecha 15/09/2022
+                </p>
+              </div>
+              <div>
+                <a
+                  href="#pasoDos"
+                  class="bg-green-500 px-4 py-2 uppercase rounded-md text-sm"
+                >
+                  Nuevo registro
+                </a>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </main>
+    </div>
   </body>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
 </html>
