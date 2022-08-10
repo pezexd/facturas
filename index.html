@@ -134,7 +134,13 @@
           >
             <div class="flex flex-col gap-12">
               <div
-                class="grid grid-cols-1 grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 divide-y sm:divide-y-0 sm:divide-x divide-stone-400"
+                class="
+                  grid grid-cols-1 grid-rows-2
+                  sm:grid-cols-2 sm:grid-rows-1
+                  divide-y
+                  sm:divide-y-0 sm:divide-x
+                  divide-stone-400
+                "
               >
                 <div class="pb-4 sm:pb-0 sm:pr-4">
                   <h2 class="text-center text-base font-bold uppercase">
@@ -241,6 +247,7 @@
                           outline-none
                         "
                         id="fechaNacimiento"
+                        min=""
                       />
                     </div>
                     <hr />
@@ -742,42 +749,41 @@
             </div>
           </section>
 
-          <section id="pasoTres">
-            <div
-              class="
-                hidden
-                target:flex
-                flex-col
-                gap-12
-                justify-center
-                items-center
-              "
-            >
-              <div id="mensajeFinal" class="max-w-md text-center">
-                <p>
-                  El cliente JUAN LOPEZ registró correctamente 4 cartones para
-                  el primer sorteo en fecha 15/09/2022
-                </p>
-              </div>
-              <div>
-                <a
-                  href="#pasoDos"
-                  class="
-                    bg-green-400
-                    px-4
-                    py-2
-                    uppercase
-                    rounded-md
-                    text-sm
-                    hover:bg-green-500
-                    transition
-                    ease-in
-                    duration-150
-                  "
-                >
-                  Nuevo registro
-                </a>
-              </div>
+          <section
+            id="pasoTres"
+            class="
+              hidden
+              target:flex
+              flex-col
+              gap-12
+              justify-center
+              items-center
+            "
+          >
+            <div id="mensajeFinal" class="max-w-md text-center">
+              <p>
+                El cliente JUAN LOPEZ registró correctamente 4 cartones para el
+                primer sorteo en fecha 15/09/2022
+              </p>
+            </div>
+            <div>
+              <a
+                href="#pasoUno"
+                class="
+                  bg-green-400
+                  px-4
+                  py-2
+                  uppercase
+                  rounded-md
+                  text-sm
+                  hover:bg-green-500
+                  transition
+                  ease-in
+                  duration-150
+                "
+              >
+                Nuevo registro
+              </a>
             </div>
           </section>
         </form>

@@ -4,6 +4,18 @@ const fechaNacimiento = document.getElementById('fechaNacimiento');
 const avisoNit = document.getElementById('avisoNit');
 document.getElementById('loadNit').addEventListener('click', loadNit);
 
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth() + 1; //January is 0 so need to add 1 to make it 1!
+today.setFullYear(today.getFullYear() - 18);
+var yyyy = today.getFullYear();
+
+today = yyyy + '-' + mm + '-' + dd;
+
+console.log(today);
+
+document.getElementById('fechaNacimiento').setAttribute('min', today);
+
 function loadNit() {
   fetch('./nit.json')
     .then((response) => response.json())
