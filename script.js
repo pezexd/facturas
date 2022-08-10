@@ -7,14 +7,13 @@ document.getElementById('loadNit').addEventListener('click', loadNit);
 var today = new Date();
 var dd = today.getDate();
 var mm = today.getMonth() + 1; //January is 0 so need to add 1 to make it 1!
-today.setFullYear(today.getFullYear() - 18);
-var yyyy = today.getFullYear();
+var yyyy = today.getFullYear() - 18;
 
+if (mm < 10) mm = '0' + mm.toString();
+if (dd < 10) dd = '0' + dd.toString();
 today = yyyy + '-' + mm + '-' + dd;
 
-console.log(today);
-
-document.getElementById('fechaNacimiento').setAttribute('min', today);
+document.getElementById('fechaNacimiento').setAttribute('max', today);
 
 function loadNit() {
   fetch('./nit.json')
