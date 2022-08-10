@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html data-theme="emerald" lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!--
+      Need a visual blank slate?
+      Remove all code in `styles.css`!
+    -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.22.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body class="bg-stone-50">
+    <main class="min-h-full flex flex-col justify-center items-center bg-stone-50 text-stone-900">
+    <header class="bg-red-500 flex justify-cente">
+    <div class="logo">
+        <img src="./img/logo.png" alt="Lotengo">
+    </div>
+    <div>Cartones por habilitar: 1223</div>
+    <div>icono info</div>
+    <div>icono logout</div>
+</header>
+<nav class="text-xs">
+  <ul class="steps">
+    <li class="step step-primary">
+      Ingreso de Facturas
+    </li>
+    <li class="step">
+      Habilitacion de Cartones
+    </li>
+    <li class="step">
+      Finalizado
+    </li>
+  </ul>
+</nav>
+<main>
+    <form>
+        <fieldset class="bg-yellow-500 flex flex-col items-center px-6 py-3" id="pasoUno">
+            <h1 class="text-2xl font-bold uppercase">Ingreso de facturas</h1>
+            <div>
+                <div>
+                    <div class="flex flex-col gap-1 ">
+                        <label class="text-sm font-bold " for="nit">NIT</label>
+                        <input type="number" class="border border-stone-400 px-3 py-1.5 rounded-lg" id="nit" placeholder="Ingrese el NIT">
+                    </div>
+                    <div>
+                        <label for="nombre">NOMBRE O RAZÓN SOCIAL</label>
+                        <input type="text" id="nombre" placeholder="Ingrese el nombre o razón social">
+                        <small>¡Revise que todas las facturas tengan el mismo nombre!.</small>
+                    </div>
+                    <div>
+                        <input type="date" id="fechaNacimiento">
+                        <label for="fechaNacimiento">Fecha de Naciemiento</label>
+                    </div>
+                    <hr />
+                    <div>
+                        <div>
+                            <div>
+                                <label for="comercio">Nombre del comercio</label>
+                                <input type="text" id="comercio" list="comercios">
+                                <datalist id="comercios">
+                                    <option value="ACAI BAR SUPER FOOD">
+                                    <option value="ADIDAS">
+                                    <option value="ALDO">
+                                    <option value="ALVINIES">
+                                    <option value="AS DE COPAS">
+                                    <option value="BABY CORP">
+                                    <option value="BLACK LLAMA">
+                                    <option value="BRASARGENT">
+                                    <option value="BUBBLE GUMMERS">
+                                    <option value="BURGER KING">
+                                    <option value="CANDY CORP/RAINBOW">
+                                    <option value="CANELITA CHEESECAKE FACTORY">
+                                    <option value="CATERPILLAR">
+                                    <option value="CLAUDIA KAREN">
+                                    <option value="COLLOKY">
+                                    <option value="CORTEFIEL">
+                                    <option value="COSMET">
+                                    <option value="CROCS">
+                                    <option value="DAYLIGHT DONUTS BO">
+                                    <option value="DEQUINCE">
+                                    <option value="DIESEL">
+                                    <option value="DONATELLA">
+                                    <option value="DOUMO">
+                                    <option value="EL DEBER">
+                                    <option value="F45 ZONA NORTE">
+                                    <option value="FAIR PLAY">
+                                    <option value="FARMACIA CHAVEZ">
+                                    <option value="FEMENINA">
+                                    <option value="FILI STEIK">
+                                    <option value="FIRST">
+                                    <option value="FLAVOR BURST">
+                                    <option value="FLORERÍA RIVERA">
+                                    <option value="FUNDASMANIA">
+                                    <option value="GREENWASH 360">
+                                    <option value="H2O">
+                                    <option value="HAUSCENTER">
+                                    <option value="HERING">
+                                    <option value="LA IBERICA/HERSHEY">
+                                    <option value="HIJOS DE RAMON">
+                                    <option value="HIPERMAXI">
+                                    <option value="HOT BURGER">
+                                    <option value="IMPULSE">
+                                    <option value="INES ESPAÑA">
+                                    <option value="ISLA VIVA">
+                                    <option value="JOYERÍA CARRASCO">
+                                    <option value="JOYERIA PARIS">
+                                    <option value="JOYERIA RICHARDIN">
+                                    <option value="JOYERÍA TAURO">
+                                    <option value="KATANA">
+                                    <option value="KAWKA">
+                                    <option value="KOVI">
+                                    <option value="LA BARRA">
+                                    <option value="LA BARRICA ALLTRADE">
+                                    <option value="LA CALESITA">
+                                    <option value="LA CASA DEL CAMBA">
+                                    <option value="LA DOCE">
+                                    <option value="LA GANGA">
+                                    <option value="LA PARISIENNE KETOCHICS">
+                                    <option value="LA PAVLOVA">
+                                    <option value="LACOSTE">
+                                    <option value="LADY POSH">
+                                    <option value="LOLA Y LOKA">
+                                    <option value="LOMOS GRILL">
+                                    <option value="MADERA">
+                                    <option value="MANJAR DE ORO">
+                                    <option value="MARCAS LIDER LUPO">
+                                    <option value="MAYBELLINE">
+                                    <option value="MESTIZO">
+                                    <option value="MINISO">
+                                    <option value="MITSUBA">
+                                    <option value="MED">
+                                    <option value="MONALISA BIER HAUS">
+                                    <option value="MONSTER WINGS">
+                                    <option value="MULTICINE">
+                                    <option value="NUTREXPLOSION">
+                                    <option value="OPTICA PRECISION">
+                                    <option value="OSH KOSH">
+                                    <option value="PACHA WOODS">
+                                    <option value="PANINO">
+                                    <option value="PEDRO DEL HIERRO">
+                                    <option value="POKE POKE">
+                                    <option value="POLLOS CHUY">
+                                    <option value="POLO RALPH LAUREN">
+                                    <option value="POUNDERS">
+                                    <option value="PREMIER FITNESS CLUB">
+                                    <option value="PRUNE">
+                                    <option value="PSYCHO BUNNY">
+                                    <option value="PUERTO MILANESA">
+                                    <option value="PUKET">
+                                    <option value="PUMA">
+                                    <option value="PURIFICACION GARCIA">
+                                    <option value="REVLON">
+                                    <option value="ROCK AND BOWL">
+                                    <option value="ROKYS">
+                                    <option value="ROSEN">
+                                    <option value="SAMSUNG">
+                                    <option value="SAYUBU">
+                                    <option value="SBARRO">
+                                    <option value="SBC">
+                                    <option value="SCARPE">
+                                    <option value="SPRINGFIELD">
+                                    <option value="STARBUCKS">
+                                    <option value="SUBWAY">
+                                    <option value="TANG">
+                                    <option value="TEXTILON">
+                                    <option value="TOTTO">
+                                    <option value="TOUS">
+                                    <option value="TROPICAL TOURS">
+                                    <option value="UNDER ARMOUR">
+                                    <option value="VACA FRIA">
+                                    <option value="VACA FRIA GOURMET">
+                                    <option value="WOMEN´SECRET">
+                                    <option value="YUTH KIDS">
+                                    <option value="BOBA">
+                                    <option value="NUTRIGO">
+                                </datalist>
+                            </div>
+                            <div>
+                                <label for="monto">MONTO DE LA FACTURA</label>
+                                <input type="number" id="monto">
+                                <button id="agregarFactura">Agregar</button>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <h1>Acumulado:</h1>
+                                <p>Bs.-123</p>
+                            </div>
+                            <hr />
+                            <div>
+                                <h1>Cartones</h1>
+                                <p>4</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="alertCalculoDeCartones">
+                        <p>FALTAN BS.- 342 PARA 5 CARTONES</p>
+                    </div>
+                </div>
+                <div>
+                    <legend>Facturas acumuladas</legend>
+                    <div id="displayFacturasAcumuladas">
+                        <div>Las Brisas Bs.-200</div>
+                        <div id="edit">Icono editar</div>
+                        <div id="delete">Icono eliminar</div>
+                    </div>
+                </div>
+                <div>
+                    <button>Siguiente</button>
+                </div>
+        </fieldset>
+        <fieldset id="pasoDos">
+            <legend>HABILITACIÓN DE CORTONES</legend>
+            <div>
+                <div>
+                    <div>
+                        <h3>Cartones</h3>
+                        <div id="cartonesFaltantes">3</div>
+                    </div>
+                    <div>
+                        <label for="serieCarton">Número de serie</label>
+                        <input type="text" id="serieCarton">
+                        <button id="habilitarSerie">Habilitar</button>
+                    </div>
+                </div>
+                <hr />
+                <div>
+                    <h2>Cartones habilitados</h2>
+                    <div id="mostrarCartonesHabilitaos">
+                        <div>Cartón Nº00001</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <button>Anterior</button>
+                </div>
+                <div>
+                    <button>Siguiente</button>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset id="pasoTres">
+            <div id="mensajeFinal">El cliente JUAN LOPEZ registró correctamente 4 cartones para el primer sorteo en
+                fecha 15/09/2022</div>
+            <button>Nuevo Registro</button>
+        </fieldset>
+      </form>
+    </main>
+  </body>
+</html>
