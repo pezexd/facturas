@@ -25,7 +25,7 @@
         text-stone-900
       "
     >
-      <header class="w-full py-4 flex justify-end items-center container">
+      <header class="w-full py-4 flex justify-between items-center container">
         <div class="logo">
           <img src="./img/logo.png" alt="Lo tengo" />
         </div>
@@ -49,82 +49,94 @@
       </header>
       <nav class="text-sm">
         <ul class="flex gap-4 sm:gap-6 md:gap-8 lg:gap-12">
-          <li
-            class="
-              relative
-              z-10
-              bg-blue-500
-              border border-transparent
-              text-stone-50 text-center
-              px-4
-              py-2
-              rounded-full
-              after:content-['']
-              after:absolute
-              after:top-4
-              after:-right-16
-              after:w-16
-              after:h-0.5
-              after:bg-blue-500
-              after:z-0
-            "
-          >
-            Ingreso de Facturas
+          <li>
+            <a
+              class="
+                relative
+                z-10
+                bg-blue-500
+                border border-transparent
+                text-stone-50 text-center
+                px-4
+                py-2
+                rounded-full
+                after:content-['']
+                after:absolute
+                after:top-4
+                after:-right-16
+                after:w-16
+                after:h-0.5
+                after:bg-blue-500
+                after:z-0
+              "
+              href="#pasoUno"
+            >
+              Ingreso de Facturas
+            </a>
           </li>
-          <li
-            class="
-              relative
-              z-20
-              bg-stone-50
-              border border-blue-500
-              text-stone-500 text-center
-              px-4
-              py-2
-              rounded-full
-              after:content-['']
-              after:absolute
-              after:top-4
-              after:-right-16
-              after:w-16
-              after:h-0.5
-              after:bg-blue-500
-              after:z-0
-              hover:bg-blue-500 hover:text-stone-50 hover:border-transparent
-              transition
-              ease-in
-              duration-150
-            "
-          >
-            Habilitacion de Cartones
+          <li>
+            <a
+              class="
+                relative
+                z-20
+                bg-stone-50
+                border border-blue-500
+                text-stone-500 text-center
+                px-4
+                py-2
+                rounded-full
+                after:content-['']
+                after:absolute
+                after:top-4
+                after:-right-16
+                after:w-16
+                after:h-0.5
+                after:bg-blue-500
+                after:z-0
+                hover:bg-blue-500 hover:text-stone-50 hover:border-transparent
+                transition
+                ease-in
+                duration-150
+              "
+              href="#pasoDos"
+            >
+              Habilitacion de Cartones
+            </a>
           </li>
-          <li
-            class="
-              relative
-              z-30
-              bg-stone-50
-              border border-blue-500
-              text-stone-500 text-center
-              px-4
-              py-2
-              rounded-full
-              hover:bg-blue-500 hover:text-stone-50 hover:border-transparent
-              transition
-              ease-in
-              duration-150
-            "
-          >
-            Finalizado
+          <li>
+            <a
+              class="
+                relative
+                z-30
+                bg-stone-50
+                border border-blue-500
+                text-stone-500 text-center
+                px-4
+                py-2
+                rounded-full
+                hover:bg-blue-500 hover:text-stone-50 hover:border-transparent
+                transition
+                ease-in
+                duration-150
+              "
+              href="#pasoTres"
+            >
+              Finalizado
+            </a>
           </li>
         </ul>
       </nav>
       <main class="mt-8">
         <form>
-          <section class="flex flex-col items-center px-6 py-3" id="pasoUno">
+          <section
+            class="hidden target:flex flex-col items-center px-6 py-3"
+            id="pasoUno"
+          >
             <div class="flex flex-col gap-12">
               <div
-                class="grid grid-cols-2 grid-rows-1 divide-x divide-stone-400"
+                class="grid grid-cols-1 grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 divide-y sm:divide-y-0 sm:divide-x divide-stone-400"
               >
-                <div class="pr-4">
+                <div class="pb-4 sm:pb-0 sm:pr-4">
                   <h2 class="text-center text-base font-bold uppercase">
                     Ingreso de facturas
                   </h2>
@@ -456,7 +468,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="pl-4">
+                <div class="pt-4 sm:pt-0 sm:pl-4">
                   <h2 class="text-center text-base font-bold uppercase">
                     Facturas acumuladas
                   </h2>
@@ -550,7 +562,10 @@
             </div>
           </section>
 
-          <!-- <section id="pasoDos" class="flex flex-col items-center px-6 py-3">
+          <section
+            id="pasoDos"
+            class="hidden target:flex flex-col items-center px-6 py-3"
+          >
             <div class="flex flex-col gap-12">
               <div class="flex flex-col divide-y divide-stone-700">
                 <div class="flex flex-col gap-2 pb-4">
@@ -691,22 +706,53 @@
               <div class="flex justify-center gap-8">
                 <a
                   href="#pasoUno"
-                  class="bg-green-400 px-4 py-2 uppercase rounded-md text-sm hover:bg-green-500 transition ease-in duration-150"
+                  class="
+                    bg-green-400
+                    px-4
+                    py-2
+                    uppercase
+                    rounded-md
+                    text-sm
+                    hover:bg-green-500
+                    transition
+                    ease-in
+                    duration-150
+                  "
                 >
                   Anterior
                 </a>
                 <a
                   href="#pasoDos"
-                  class="bg-green-400 px-4 py-2 uppercase rounded-md text-sm hover:bg-green-500 transition ease-in duration-150"
+                  class="
+                    bg-green-400
+                    px-4
+                    py-2
+                    uppercase
+                    rounded-md
+                    text-sm
+                    hover:bg-green-500
+                    transition
+                    ease-in
+                    duration-150
+                  "
                 >
                   Siguiente
                 </a>
               </div>
             </div>
-          </section> -->
+          </section>
 
-          <!-- <section id="pasoTres">
-            <div class="flex flex-col gap-12 justify-center items-center">
+          <section id="pasoTres">
+            <div
+              class="
+                hidden
+                target:flex
+                flex-col
+                gap-12
+                justify-center
+                items-center
+              "
+            >
               <div id="mensajeFinal" class="max-w-md text-center">
                 <p>
                   El cliente JUAN LOPEZ registró correctamente 4 cartones para
@@ -733,7 +779,7 @@
                 </a>
               </div>
             </div>
-          </section> -->
+          </section>
         </form>
       </main>
     </div>
@@ -741,6 +787,11 @@
   <style>
     body {
       font-family: 'Poppins', sans-serif;
+    }
+    input[type='number']::-webkit-inner-spin-button,
+    input[type='number']::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
     }
   </style>
 </html>
